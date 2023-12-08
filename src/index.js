@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import MyCSSProvider from './componants/MyCSSProvider';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
+import AuthState from './api/context/auth/AuthState';
+import AppRouter from './componants/routes/Router';
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AuthState>
+      <MyCSSProvider>
+        <QueryClientProvider client={queryClient}>
+          <BrowserRouter>
+            <AppRouter />
+          </BrowserRouter>
+        </QueryClientProvider>
+      </MyCSSProvider>
+    </AuthState>
   </React.StrictMode>
 );
 
