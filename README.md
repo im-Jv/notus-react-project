@@ -1,7 +1,10 @@
-# Getting Started with Create React App
+# Notus React using React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The [Creative Team's Demo Page(https://demos.creative-tim.com/notus-react/?_ga=2.110325313.57013471.1701329362-962988589.1701329362#/admin/dashboard)] inspires this project for practice purposes
 
+## API used
+  for login - JSON Placeholder - (https://jsonplaceholder.typicode.com/users)
+  
 ## Available Scripts
 
 In the project directory, you can run:
